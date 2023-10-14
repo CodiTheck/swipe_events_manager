@@ -1,0 +1,155 @@
+<!--
+	@project: SwipeEventsManager - https://github.com/CodiTheck/swipe_events_manager
+	@fileoverview: The html structure for package testing.
+	@author: Obrymec - obrymecsprinces@gmail.com
+	@created: 2023-10-06
+	@updated: 2023-10-14
+	@file: index.html
+	@version: 0.0.2
+-->
+
+<!--Swipe events manager-->
+<!Doctype html>
+	<!--Structure-->
+	<html lang = "en">
+		<!--Header-->
+		<head>
+      <!--General title--> 
+			<title>
+				Swipe Events Manager | Testing
+			</title>
+			<!--Encoding: "UTF-8"-->
+			<meta
+        content = "width=device-width, initial-scale=1"
+        name = "viewport"
+        charset = "utf-8"
+      />
+      <!--Package favicon-->
+			<link
+        ref = "./favicon.ico"
+        rel = "shortcut icon"
+        type = "image/ico"
+      />
+      <link
+        href = "./favicon.ico"
+        type = "image/ico"
+        rel = "icon"
+      />
+      <!--Stylesheets-->
+      <style
+        type = "text/css"
+        media = "screen"
+      >
+        /* Top card */
+        div.top-card {
+          transform: translate(-50%, -25%) translate3d(0, 0, 0);
+          top: 25%;
+        }
+        /* Bottom card */
+        div.bottom-card {
+          transform: translate(-50%, 0) translate3d(0, 0, 0);
+          bottom: 16%;
+        }
+        /* Top span */
+        span {
+          transform: translate(-50%, -50%);
+          visibility: hidden;
+          top: 50%;
+        }
+        /* Cards and content */
+        div.bottom-card,
+        div.top-card,
+        span {
+          cursor: pointer;
+          position: fixed;
+          left: 50%;
+        }
+        /* Body */
+        body {
+          font-family: Arial;
+          user-select: none;
+          font-size: 16px;
+          color: white;
+        }
+        /* Cards */
+        div.bottom-card,
+        div.top-card {
+          border: 3px solid transparent;
+          background-color: red;
+          height: 160px;
+          width: 160px;
+        }
+        /* Active card */
+        div.active {
+          border: 3px solid salmon;
+          background-color: green;
+          cursor: auto;
+        }
+        /* Active span */
+        div.active > span {
+          visibility: visible;
+          cursor: auto;
+        }
+        /* Button */
+        button {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: steelblue;
+          transition: all .2s linear;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+        }
+        /* Hover effect */
+        button:hover {
+          background-color: skyblue;
+        }
+        /* Info */
+        div.info {
+          font-weight: bolder;
+          text-align: center;
+          color: #646464;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          left: 20px;
+        }
+      </style>
+		</head>
+		<!--Global container-->
+		<body>
+			<!--Global content-->
+			<main class = "content">
+        <!--Top card-->
+        <div
+          class = "top-card active"
+          name = "Top card"
+        >
+          <span>Swipe me !</span>
+        </div>
+        <!--Bottom card-->
+        <div
+          class = "bottom-card"
+          name = "Bottom card"
+        >
+          <span>Swipe me !</span>
+        </div>
+        <!--Free swipe control-->
+        <button>
+          Destroy event effects
+        </button>
+      </main>
+      <!--Info-->
+      <div class = "info">
+        It's recommended to open the
+        website from your mobile
+        phone to get a better result.
+      </div>
+			<!--Test-->
+      <script
+        src = "./index.test.js"
+        type = "module"
+      ></script>
+		</body>
+	</html>
