@@ -1,5 +1,5 @@
 /**
-* @project SwipeEventsManager - https://github.com/CodiTheck/swipe_events_manager
+* @project SwipeEventsManager - https://CodiTheck.github.io/swipe_events_manager
 * @fileoverview Tests the package to prevent upcomming bugs.
 * @author Obrymec - obrymecsprinces@gmail.com
 * @type {SwipeEventsManager}
